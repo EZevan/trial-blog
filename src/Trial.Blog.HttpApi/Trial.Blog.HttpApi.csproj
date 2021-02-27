@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\Trial.Blog.HttpApi.Hosting\Trial.Blog.HttpApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Trial.Blog</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--<ProjectReference Include="..\Trial.Blog.Application.Contracts\Trial.Blog.Application.Contracts.csproj" />-->
+    <ProjectReference Include="..\Trial.Blog.Application\Trial.Blog.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="4.2.1" />
+    <!--<PackageReference Include="Volo.Abp.Account.HttpApi" Version="4.2.1" />-->
+    <!--<PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="4.2.1" />-->
+    <!--<PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="4.2.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="4.2.1" />-->
+  </ItemGroup>
+
+</Project>
