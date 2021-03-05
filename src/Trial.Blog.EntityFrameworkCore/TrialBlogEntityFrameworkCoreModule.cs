@@ -20,7 +20,12 @@ namespace Trial.Blog.EntityFrameworkCore
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+            context.Services.AddAbpDbContext<TrialBlogDbContext>(options =>
+            {
+                options.AddDefaultRepositories(true);
+            });
 
+            
         }
     }
 }

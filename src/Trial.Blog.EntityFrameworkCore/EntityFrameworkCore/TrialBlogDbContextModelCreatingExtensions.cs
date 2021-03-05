@@ -3,7 +3,7 @@ using Volo.Abp;
 
 namespace Trial.Blog.EntityFrameworkCore
 {
-    public static class BlogDbContextModelCreatingExtensions
+    public static class TrialBlogDbContextModelCreatingExtensions
     {
         public static void ConfigureBlog(this ModelBuilder builder)
         {
