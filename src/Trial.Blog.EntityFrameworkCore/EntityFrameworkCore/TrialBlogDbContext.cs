@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Trial.Blog.Entities;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
@@ -13,16 +14,21 @@ namespace Trial.Blog.EntityFrameworkCore
      * Don't use this DbContext for database migrations since it does not contain tables of the
      * used modules (as explained above). See BlogMigrationsDbContext for migrations.
      */
-    [ConnectionStringName("Default")]
-    public class BlogDbContext : AbpDbContext<BlogDbContext>
+    [ConnectionStringName("MySql")]
+    public class TrialBlogDbContext : AbpDbContext<TrialBlogDbContext>
     {
         //public DbSet<AppUser> Users { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<PostTag> PostTags { get; set; }
+        public DbSet<FriendLink> FriendLinks { get; set; }
 
         /* Add DbSet properties for your Aggregate Roots / Entities here.
          * Also map them inside BlogDbContextModelCreatingExtensions.ConfigureBlog
          */
 
-        public BlogDbContext(DbContextOptions<BlogDbContext> options)
+        public TrialBlogDbContext(DbContextOptions<TrialBlogDbContext> options)
             : base(options)
         {
 

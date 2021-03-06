@@ -5,6 +5,7 @@ using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Volo.Abp.EntityFrameworkCore.PostgreSql;
 using Volo.Abp.EntityFrameworkCore.Sqlite;
 using Volo.Abp.Modularity;
+using Trial.Blog.Configurations;
 
 namespace Trial.Blog.EntityFrameworkCore
 {
@@ -25,7 +26,28 @@ namespace Trial.Blog.EntityFrameworkCore
                 options.AddDefaultRepositories(true);
             });
 
-            
+            Configure<AbpDbContextOptions>(options =>
+            { 
+                switch (AppSettings.EnableDbName)
+                {
+                    case "MySql":
+                        options.UseMySQL();
+                        break;
+                    case "SqlServer":
+                        options.UseSqlServer();
+                        break;
+                    case "PostgreSql":
+                        options.UseNpgsql();
+                        break;
+                    case "Sqlite":
+                        options.UseSqlite();
+                        break;
+                    default:
+                        options.UseMySQL();
+                        break;
+                }
+            });
         }
+       
     }
 }
