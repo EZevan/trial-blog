@@ -7,6 +7,10 @@
     <RootNamespace>Trial.Blog</RootNamespace>
   </PropertyGroup>
 
+<!--  <PropertyGroup>-->
+<!--    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>-->
+<!--  </PropertyGroup>-->
+  
   <ItemGroup>
     <ProjectReference Include="..\Trial.Blog.EntityFrameworkCore\Trial.Blog.EntityFrameworkCore.csproj" />
   </ItemGroup>
@@ -14,6 +18,19 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.*" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\20210307113010_initial.Designer.cs" />
+    <Compile Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Migrations\**" />
   </ItemGroup>
 
 </Project>

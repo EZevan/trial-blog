@@ -17,7 +17,7 @@ namespace Trial.Blog
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<TrialBlogMigrationDbContext>()
-                .UseMySql(ServerVersion.AutoDetect(configuration.GetConnectionString("Defualt")));
+                .UseMySql(configuration.GetConnectionString("Default"),ServerVersion.AutoDetect(configuration.GetConnectionString("Default")));
 
             return new TrialBlogMigrationDbContext(builder.Options);
         }

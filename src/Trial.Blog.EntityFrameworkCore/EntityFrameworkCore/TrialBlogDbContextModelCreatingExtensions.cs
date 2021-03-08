@@ -23,16 +23,17 @@ namespace Trial.Blog.EntityFrameworkCore
 
             builder.Entity<Post>(b =>
             {
-                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.Posts);
+                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.Posts).HasComment("The content of blog");
                 b.ConfigureByConvention();
                 b.HasKey(x => x.Id);
-                b.Property(x => x.Title).HasMaxLength(255).IsRequired();
-                b.Property(x => x.Author).HasMaxLength(50);
-                b.Property(x => x.Url).HasMaxLength(255).IsRequired();
-                b.Property(x => x.Html).HasColumnType("longtext").IsRequired();
-                b.Property(x => x.Markdown).HasColumnType("longtext").IsRequired();
-                b.Property(x => x.CategoryId).HasColumnType("int");
-                b.Property(x => x.CreationTime).HasColumnType("datetime");
+                b.Property(x => x.Id).HasComment("The id of post record");
+                b.Property(x => x.Title).HasMaxLength(255).IsRequired().HasComment("The title of blog");
+                b.Property(x => x.Author).HasMaxLength(50).HasComment("The author of blog");
+                b.Property(x => x.Url).HasMaxLength(255).IsRequired().HasComment("The url of blog");
+                b.Property(x => x.Html).HasColumnType("longtext").IsRequired().HasComment("The html of blog");
+                b.Property(x => x.Markdown).HasColumnType("longtext").IsRequired().HasComment("The markdown of blog");
+                b.Property(x => x.CategoryId).HasColumnType("int").HasComment("The category id of blog");
+                b.Property(x => x.CreationTime).HasColumnType("datetime").HasComment("the creation time");
             });
 
             builder.Entity<Category>(b =>
@@ -40,8 +41,9 @@ namespace Trial.Blog.EntityFrameworkCore
                 b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.Categories);
                 b.ConfigureByConvention();
                 b.HasKey(x => x.Id);
-                b.Property(x => x.CategoryName).HasMaxLength(50).IsRequired();
-                b.Property(x => x.DisplayName).HasMaxLength(50).IsRequired();
+                b.Property(x => x.Id).HasComment("The id of category");
+                b.Property(x => x.CategoryName).HasMaxLength(50).IsRequired().HasComment("The category name of blog");
+                b.Property(x => x.DisplayName).HasMaxLength(50).IsRequired().HasComment("The display name of category");
             });
 
             builder.Entity<Tag>(b =>
@@ -49,8 +51,9 @@ namespace Trial.Blog.EntityFrameworkCore
                 b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.Tags);
                 b.ConfigureByConvention();
                 b.HasKey(x => x.Id);
-                b.Property(x => x.TagName).HasMaxLength(50).IsRequired();
-                b.Property(x => x.DisplayName).HasMaxLength(50).IsRequired();
+                b.Property(x => x.Id).HasComment("The id of tag");
+                b.Property(x => x.TagName).HasMaxLength(50).IsRequired().HasComment("the tag name");
+                b.Property(x => x.DisplayName).HasMaxLength(50).IsRequired().HasComment("The display name of tag");
             });
 
             builder.Entity<PostTag>(b =>
@@ -58,8 +61,9 @@ namespace Trial.Blog.EntityFrameworkCore
                 b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.PostTags);
                 b.ConfigureByConvention();
                 b.HasKey(x => x.Id);
-                b.Property(x => x.PostId).HasColumnType("int").IsRequired();
-                b.Property(x => x.TagId).HasColumnType("int").IsRequired();
+                b.Property(x => x.Id).HasComment("The id of post tag");
+                b.Property(x => x.PostId).HasColumnType("int").IsRequired().HasComment("the post id of blog");
+                b.Property(x => x.TagId).HasColumnType("int").IsRequired().HasComment("the tag id of blog");
             });
 
             builder.Entity<FriendLink>(b =>
@@ -67,8 +71,9 @@ namespace Trial.Blog.EntityFrameworkCore
                 b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.FriendLinks);
                 b.ConfigureByConvention();
                 b.HasKey(x => x.Id);
-                b.Property(x => x.Title).HasMaxLength(50).IsRequired();
-                b.Property(x => x.LinkUrl).HasMaxLength(255).IsRequired();
+                b.Property(x => x.Id).HasComment("The id of friend link");
+                b.Property(x => x.Title).HasMaxLength(50).IsRequired().HasComment("The title of friend link");
+                b.Property(x => x.LinkUrl).HasMaxLength(255).IsRequired().HasComment("The link url of friend link");
             });
         }
     }

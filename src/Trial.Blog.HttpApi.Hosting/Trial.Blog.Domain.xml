@@ -4,5 +4,100 @@
         <name>Trial.Blog.Domain</name>
     </assembly>
     <members>
+        <member name="T:Trial.Blog.Entities.Category">
+            <summary>
+            Category
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.Category.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.Category.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="T:Trial.Blog.Entities.FriendLink">
+            <summary>
+            FriendLink
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.FriendLink.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.FriendLink.LinkUrl">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="T:Trial.Blog.Entities.Post">
+            <summary>
+            Post
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.Post.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.Post.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.Post.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.Post.Html">
+            <summary>
+            HTML
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.Post.Markdown">
+            <summary>
+            Markdown
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.Post.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="T:Trial.Blog.Entities.PostTag">
+            <summary>
+            PostTag
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.PostTag.PostId">
+            <summary>
+            文章Id
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.PostTag.TagId">
+            <summary>
+            标签Id
+            </summary>
+        </member>
+        <member name="T:Trial.Blog.Entities.Tag">
+            <summary>
+            Tag
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.Tag.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Entities.Tag.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
     </members>
 </doc>
