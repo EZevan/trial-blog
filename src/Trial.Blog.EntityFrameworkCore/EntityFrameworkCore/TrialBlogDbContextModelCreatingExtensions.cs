@@ -23,7 +23,7 @@ namespace Trial.Blog.EntityFrameworkCore
 
             builder.Entity<Post>(b =>
             {
-                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.Posts).HasComment("The content of blog");
+                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.Posts).HasComment("The content of blog.");
                 b.ConfigureByConvention();
                 b.HasKey(x => x.Id);
                 b.Property(x => x.Id).HasComment("The id of post record");
@@ -38,7 +38,7 @@ namespace Trial.Blog.EntityFrameworkCore
 
             builder.Entity<Category>(b =>
             {
-                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.Categories);
+                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.Categories).HasComment("The category of blog.");
                 b.ConfigureByConvention();
                 b.HasKey(x => x.Id);
                 b.Property(x => x.Id).HasComment("The id of category");
@@ -48,7 +48,7 @@ namespace Trial.Blog.EntityFrameworkCore
 
             builder.Entity<Tag>(b =>
             {
-                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.Tags);
+                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.Tags).HasComment("The tag of blog.");
                 b.ConfigureByConvention();
                 b.HasKey(x => x.Id);
                 b.Property(x => x.Id).HasComment("The id of tag");
@@ -58,7 +58,7 @@ namespace Trial.Blog.EntityFrameworkCore
 
             builder.Entity<PostTag>(b =>
             {
-                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.PostTags);
+                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.PostTags).HasComment("The post tab of blog.");
                 b.ConfigureByConvention();
                 b.HasKey(x => x.Id);
                 b.Property(x => x.Id).HasComment("The id of post tag");
@@ -68,7 +68,7 @@ namespace Trial.Blog.EntityFrameworkCore
 
             builder.Entity<FriendLink>(b =>
             {
-                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.FriendLinks);
+                b.ToTable(TrialBlogConsts.DbTablePrefix + DbTableName.FriendLinks).HasComment("The friend link of blog.");
                 b.ConfigureByConvention();
                 b.HasKey(x => x.Id);
                 b.Property(x => x.Id).HasComment("The id of friend link");

@@ -99,5 +99,39 @@
             展示名称
             </summary>
         </member>
+        <member name="T:Trial.Blog.BlogEntities.Repositories.ICategoryRepository">
+            <summary>
+            ICategoryRepository
+            </summary>
+        </member>
+        <member name="T:Trial.Blog.BlogEntities.Repositories.IFriendLinkRepository">
+            <summary>
+            IFriendLinkRepository
+            </summary>
+        </member>
+        <member name="T:Trial.Blog.BlogEntities.Repositories.IPostRepository">
+            <summary>
+            IPostRepository
+            </summary>
+        </member>
+        <member name="M:Trial.Blog.BlogEntities.Repositories.IPostTagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Trial.Blog.Entities.PostTag})">
+            <summary>
+            Bulk insertion
+            </summary>
+            <param name="postTags">A collection object of <see cref="T:Trial.Blog.Entities.PostTag"/>.</param>
+            <returns>The <see cref="T:System.Threading.Tasks.Task"/> object.</returns>
+        </member>
+        <member name="T:Trial.Blog.BlogEntities.Repositories.ITagRepository">
+            <summary>
+            ITagRepository
+            </summary>
+        </member>
+        <member name="M:Trial.Blog.BlogEntities.Repositories.ITagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Trial.Blog.Entities.Tag})">
+            <summary>
+            Bulk Insertion <see cref="T:Trial.Blog.Entities.Tag"/>.
+            </summary>
+            <param name="tags">A collection object of <see cref="T:Trial.Blog.Entities.Tag"/>.</param>
+            <returns>The <see cref="T:System.Threading.Tasks.Task"/> object.</returns>
+        </member>
     </members>
 </doc>

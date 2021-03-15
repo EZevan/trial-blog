@@ -4,5 +4,35 @@
         <name>Trial.Blog.Application.Contracts</name>
     </assembly>
     <members>
+        <member name="P:Trial.Blog.Blog.PostDto.Title">
+            <summary>
+            Post title
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Blog.PostDto.Author">
+            <summary>
+            Post auther
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Blog.PostDto.Url">
+            <summary>
+            Post url
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Blog.PostDto.Html">
+            <summary>
+            Post html
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Blog.PostDto.Markdown">
+            <summary>
+            Post markdown
+            </summary>
+        </member>
+        <member name="P:Trial.Blog.Blog.PostDto.CategoryId">
+            <summary>
+            Post category id
+            </summary>
+        </member>
     </members>
 </doc>

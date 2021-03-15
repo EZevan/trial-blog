@@ -11,9 +11,9 @@
     <DocumentationFile>..\Trial.Blog.HttpApi.Hosting\Trial.Blog.Domain.xml</DocumentationFile>
   </PropertyGroup>
 
-  <!--<ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Trial.Blog.Domain.Shared\Trial.Blog.Domain.Shared.csproj" />
-  </ItemGroup>-->
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Identity.Domain" Version="4.2.1" />

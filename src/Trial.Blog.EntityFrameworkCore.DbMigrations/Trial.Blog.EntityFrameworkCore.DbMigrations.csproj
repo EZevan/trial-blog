@@ -20,17 +20,16 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.*" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Include="Migrations\20210307113010_initial.Designer.cs" />
-    <Compile Remove="Migrations\**" />
-  </ItemGroup>
+<!--  <ItemGroup>-->
+<!--    <Compile Remove="Migrations\**" />-->
+<!--  </ItemGroup>-->
 
-  <ItemGroup>
-    <EmbeddedResource Remove="Migrations\**" />
-  </ItemGroup>
+<!--  <ItemGroup>-->
+<!--    <EmbeddedResource Remove="Migrations\**" />-->
+<!--  </ItemGroup>-->
 
-  <ItemGroup>
-    <None Remove="Migrations\**" />
-  </ItemGroup>
+<!--  <ItemGroup>-->
+<!--    <None Remove="Migrations\**" />-->
+<!--  </ItemGroup>-->
 
 </Project>

@@ -40,6 +40,6 @@ namespace Trial.Blog.Entities
         /// <summary>
         /// 分类Id
         /// </summary>
-        public int CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
     }
 }

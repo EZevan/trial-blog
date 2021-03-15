@@ -12,7 +12,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Trial.Blog.Domain.Shared\Trial.Blog.Domain.Shared.csproj" />
+    <PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="4.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Trial.Blog.Domain\Trial.Blog.Domain.csproj" />
   </ItemGroup>
 
 </Project>
